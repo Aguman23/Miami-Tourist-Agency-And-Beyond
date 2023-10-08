@@ -1,0 +1,29 @@
+@use '../../styles/partials/variables' as *;
+
+.experiences-section {
+    color: $white;
+
+    &__carousel {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+
+        
+        &-item {
+            width: 30vw;
+            height: 45vw;
+            margin: 0 2vw;
+
+
+            flex: 0 0 auto;
+            border-radius: 10px;
+            background-color: $nasa-black;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
