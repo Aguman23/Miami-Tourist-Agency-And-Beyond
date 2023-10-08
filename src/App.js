@@ -10,6 +10,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<HomePage />} />
+        <Route path='/mars-explore' element={<ExploreMarsPage/>} />
+        <Route path='/pick-dates' element= {<PickDates/>} />
       </Routes>
       <NavBar />
     </BrowserRouter>

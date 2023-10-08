@@ -1,6 +1,5 @@
 import './PickDates.scss';
 import calendar from '../../assets/icons/Calendar white.svg';
-
 import { useState } from 'react';
 
 function PickDates() {

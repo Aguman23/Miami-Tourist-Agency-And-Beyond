@@ -1,4 +1,5 @@
 import './ExploreMarsPage.scss';
+import Info from "../../assets/icons/Info.svg"
 
 function ExploreMarsPage() {
     return (
@@ -17,7 +18,7 @@ function ExploreMarsPage() {
             <div className="mars-explore__route-container-1">
 
                 <div>
-                    {/* <img className="" src="" /> */}
+                    <Info />
                 </div>
                 
                 <h3>Direct Route</h3>
