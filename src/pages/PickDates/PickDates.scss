@@ -1,19 +1,31 @@
 @use '../../styles/partials/variables' as *;
 
+
 .pick-dates {
     color: $white;
+    padding: 0 4vw;
 
     &__background {
-        background-image: url('../../assets/backgrounds/Marsbase-blurry-resized.png');
+        background-image: url('../../assets/backgrounds/marsbas-blurr-v4\ \(wider\).png');
         background-position: center;
         background-size: cover;
 
-        height: 100vh;
+        height: 120vh;
     }
 
     &__heading {
         font-size: 2rem;
         text-align: center;
+        padding: 2vw 0;
+    }
+
+    &__secondary-heading {
+        margin: 2vw 0;
+    }
+
+    &__description {
+        font-weight: 200;
+        font-size: .8rem;
     }
 
     &__container {
@@ -24,13 +36,17 @@
         border: 2px solid $white;
         border-radius: 10px;
         padding: 2vw;
+        margin: 2vw 0;
     }
 
     &__plus-minus-container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         width: 40%;
+        height: 8vw;
+        margin: 2vw 0;
     }
 
     &__plus-minus {
@@ -68,4 +84,30 @@
             background-color: $button-red;
         }
     }
+
+    &__amenities {
+
+        &-container {
+            display: flex;
+            flex-wrap: wrap;
+            
+            width: 100%;
+        }
+
+        &-amenity {
+            width: 45%;
+            height: 30vw;
+
+            margin: 2vw;
+            background-color: $white;
+
+            border-radius: 10px;
+            
+        }
+    }
+
+}
+
+.extra {
+    margin-top: 6vw;
 }

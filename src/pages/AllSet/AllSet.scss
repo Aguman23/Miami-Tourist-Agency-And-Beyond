@@ -1,0 +1,74 @@
+@use '../../styles/partials/variables' as *;
+
+.all-set {
+    background-image: url('../../assets/backgrounds/falling-stars-background-oxIqrfH6zm.png');
+    background-position: center;
+    background-size: cover;
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: $white;
+
+    &__heading {
+        width: 100%;
+        padding: 0 6vw;
+        margin: 2vw;
+    }
+
+    &__completed {
+        width: 100%;
+        height: 60vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-container {
+            width: 80%;
+            height: 90%;
+            border-radius: 10px;
+
+            background-color: rgba($nasa-black, 0.3);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__button {
+        background-color: $button-red;
+        border: none;
+        width: 40%;
+        height: 10vw;
+
+        margin-top: 2vw;
+        border-radius: 10px;
+        color: $white;
+    }
+
+    &__description {
+        font-size: 3rem;
+        width: 60%;
+
+        text-align: center;
+
+        padding: 2vw 0;
+    }
+
+    &__checkmark {
+        width: 35vw;
+        height: 35vw;
+    }
+}
+
+.off {
+    display: none;
+}

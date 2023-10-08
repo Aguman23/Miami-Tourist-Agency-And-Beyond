@@ -33,7 +33,7 @@ function PickDates() {
                 </p>
             </section>
 
-            <div className='pick-dates__container'>
+            <div className='pick-dates__container extra'>
                 <p className='pick-dates__description'>
                     Number of Passengers
                 </p>
@@ -50,7 +50,7 @@ function PickDates() {
                 </div>
             </div>
 
-            <div className='pick-dates__select-dates'>
+            <div className='pick-dates__select-dates extra'>
                 <h2 className='pick-dates__secondary-heading'>
                     Select Travel Date
                 </h2>
@@ -76,7 +76,7 @@ function PickDates() {
                 </div>
             </section>
 
-            <div className='pick-dates__buttons'>
+            <div className='pick-dates__buttons extra'>
                 <button className='pick-dates__buttons-button'>
                     Previous
                 </button>
@@ -84,6 +84,26 @@ function PickDates() {
                     Next
                 </button>
             </div>
+
+            <section className='pick-dates__amenities extra'>
+                <h2 className='pick-dates__secondary-heading'>
+                    Voyager 123's Amenities
+                </h2>
+                <div className='pick-dates__amenities-container'>
+                    <div className='pick-dates__amenities-amenity'>
+
+                    </div>
+                    <div className='pick-dates__amenities-amenity'>
+                        
+                    </div>
+                    <div className='pick-dates__amenities-amenity'>
+                        
+                    </div>
+                    <div className='pick-dates__amenities-amenity'>
+                        
+                    </div>
+                </div>
+            </section>
         </main>
     )
 }
