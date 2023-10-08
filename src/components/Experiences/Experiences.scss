@@ -3,6 +3,10 @@
 .experiences-section {
     color: $white;
 
+    &__heading {
+        margin: 3vw;
+    }
+
     &__carousel {
         display: flex;
         flex-wrap: nowrap;
@@ -10,8 +14,8 @@
 
         
         &-item {
-            width: 30vw;
-            height: 45vw;
+            width: 40vw;
+            height: 55vw;
             margin: 0 2vw;
 
 

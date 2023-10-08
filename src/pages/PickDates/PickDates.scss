@@ -1,0 +1,71 @@
+@use '../../styles/partials/variables' as *;
+
+.pick-dates {
+    color: $white;
+
+    &__background {
+        background-image: url('../../assets/backgrounds/Marsbase-blurry-resized.png');
+        background-position: center;
+        background-size: cover;
+
+        height: 100vh;
+    }
+
+    &__heading {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border: 2px solid $white;
+        border-radius: 10px;
+        padding: 2vw;
+    }
+
+    &__plus-minus-container {
+        display: flex;
+        justify-content: space-between;
+
+        width: 40%;
+    }
+
+    &__plus-minus {
+        width: 10vw;
+        height: 10vw;
+        border: 1px solid $white;
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__prices {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__buttons {
+        width: 70%;
+        margin: auto;
+
+        display: flex;
+        justify-content: space-between;
+
+        &-button {
+            width: 45%;
+            height: 10vw;
+
+            border: none;
+            border-radius: 10px;
+
+            color: $white;
+            background-color: $button-red;
+        }
+    }
+}
