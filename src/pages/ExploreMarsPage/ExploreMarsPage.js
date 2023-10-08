@@ -2,19 +2,19 @@ import './ExploreMarsPage.scss';
 
 function ExploreMarsPage() {
     return (
-        <main className='main-background'>
+        <main className='mars-explore__main-background'>
             
+            <div  className='mars-explore__title-container'>
+            <h2 className="mars-explore__title">Explore Mars</h2>
+            </div>
             
-            <h2>Explore Mars</h2>
-            
-            
-            <p>Embark on a journey to the enigmatic Red Planet, where adventure beckons at your own pace. Choose the high-speed sprint for a thrilling arrival within hours, or indulge in a luxurious, leisurely cruise through space. Whichever you pick, the allure of Mars awaits.</p>
+            <p className="mars-explore__description">Embark on a journey to the enigmatic Red Planet, where adventure beckons at your own pace. Choose the high-speed sprint for a thrilling arrival within hours, or indulge in a luxurious, leisurely cruise through space. Whichever you pick, the allure of Mars awaits.</p>
         
 
-            <h3>Choose your speed:</h3>
+            <h3 className="mars-explore__subtitle">Choose your speed:</h3>
 
 
-            <div>
+            <div className="mars-explore__route-container-1">
 
                 <div>
                     {/* <img className="" src="" /> */}
@@ -28,13 +28,15 @@ function ExploreMarsPage() {
 
             </div>
 
-            <div>
+            <div className="mars-explore__route-container-2">
 
                 <div>
                     {/* <img className="" src="" /> */}
                 </div>
 
-                <h3>Scenic Route</h3>
+                <div>
+                    <h3>Scenic Route</h3>
+                </div>
 
                 <div>
                     <p>Select</p>

@@ -1,0 +1,63 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.mars-explore {
+  &__main-background {
+    background-image: url("../../assets/backgrounds/falling-stars-background-oxIqrfH6zm.png");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+  &__title {
+    // @include Inter-ExtraBold;
+    font-family: "Inter";
+    font-weight: 800;
+    font-size: 2rem;
+    color: $white;
+    text-align: center;
+  }
+  &__title-container {
+    padding: 1rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100vw;
+  }
+  &__description {
+    font-size: 1rem;
+    font-family: "Inter";
+    font-weight: 400;
+    color: $white;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1.5rem;
+  }
+  &__subtitle {
+    font-size: 1.5rem;
+    font-family: "Inter";
+    font-weight: 800;
+    color: $white;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1.5rem;
+  }
+  &__route-container-1 {
+    width: 90%;
+    height: 11.25rem;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1rem;
+  }
+  &__route-container-2 {
+    width: 90%;
+    height: 11.25rem;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1rem;
+  }
+}
