@@ -8,16 +8,16 @@ function Experiences() {
             </h2>
 
             <section className='experiences-section__carousel'>
-                <div className='experiences-section__carousel-item'>
-                    <p>Moon Hop on Saturn</p>
+                <div className='experiences-section__carousel-item experiences-section__carousel-item--saturn'>
+                    <p className='experiences-section__carousel-writing'>Moon Hop on Saturn</p>
                 </div>
-                <div className='experiences-section__carousel-item'>
-                    <p>Explore Mars</p>
+                <div className='experiences-section__carousel-item experiences-section__carousel-item--mars'>
+                    <p className='experiences-section__carousel-writing'>Explore Mars</p>
                 </div>
-                <div className='experiences-section__carousel-item'>
-                    <p>Orbit Jupiter</p>
+                <div className='experiences-section__carousel-item experiences-section__carousel-item--jupiter'>
+                    <p className='experiences-section__carousel-writing'>Orbit Jupiter</p>
                 </div>
-                <div className='experiences-section__carousel-item'>
+                <div className='experiences-section__carousel-item experiences-section__carousel-item--kepler'>
                     <p>Coming Soon!</p>
                     <p>Visit Kepler 186f</p>
                 </div>

@@ -1,31 +1,34 @@
 import './AllSet.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import checkmark from '../../assets/icons/evaCheckmarkCircleFill1.svg';
+import TopBar from '../../components/TopBar/TopBar';
 
 function AllSet() {
     const [showCompleted, setShowCompleted] = useState(false);
     const [count, setCount] = useState(3);
 
-    // while(count != 0){
-    //     setTimeout( () => {
-    //         setCount(count - 1)
-    //     }, 1000);
-    // }
+    useEffect(() => {
+        setTimeout( () => {
+            setCount(count - 1)
+        }, 1000);
+    }, [count, count > 0]);
 
-    function countDown(){
+    setTimeout(() => {
+        setShowCompleted(true);
+    }, 3000);
 
-    }
     return (
         <main className='all-set'>
+            <TopBar home={true} />
 
             <section className={showCompleted ? 'off' : 'all-set__countdown'}>
-                <h1>hiii</h1>
+                <h1>{count}</h1>
             </section>
 
             <section className={showCompleted ? 'all-set__completed' : 'off'}>
                 <h2 className='all-set__heading'>
-                    Start Packing!
+                    Lift Off!
                 </h2>
                 <div className='all-set__completed-container'>
                     <img className='all-set__checkmark' src={checkmark}></img>

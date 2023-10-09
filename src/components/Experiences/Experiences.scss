@@ -21,13 +21,34 @@
 
             flex: 0 0 auto;
             border-radius: 10px;
-            background-color: $nasa-black;
+            background-position: center;
+            background-size: cover;
 
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+
+            &--saturn {
+                background-image: url('../../assets/cards/moonhopSaturn.png');
+            }
+
+            &--mars {
+                background-image: url('../../assets/cards/exploreMars.png');
+            }
+
+            &--jupiter {
+                background-image: url('../../assets/cards/orbitJupiter.png');
+            }
+
+            &--kepler {
+                background-image: url('../../assets/cards/kepler.png');
+            }
+        }
+
+        &-writing {
+            width: 80%;
         }
     }
 }

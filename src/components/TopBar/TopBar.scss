@@ -1,0 +1,25 @@
+.top-bar {
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 2vw 2vw 1vw 0;
+
+    &__empty-div {
+        padding-left: 8vw;
+    }
+
+    &__logo {
+
+        &-home {
+            width: 50%;
+        }
+        
+        &-other {
+            width: 30%;
+        }
+    }
+}
+

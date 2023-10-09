@@ -1,0 +1,139 @@
+@use '../../styles/partials/variables' as *;
+
+.traveler-details {
+    background-image: url('../../assets/backgrounds/backgroundMain.png');
+    background-position: center;
+    background-size: cover;
+
+    height: 120vh;
+    padding: 13vw 0 0 0;
+
+    color: $white;
+
+    &__heading {
+        text-align: center;
+        margin: 4vw 0;
+    }
+
+    &__main {
+        padding: 0 4vw;
+
+        &-heading {
+            margin: 2vw 0;
+        }
+    }
+
+    &__cards {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+
+        &-card {
+            width: 48%;
+            border-radius: 10px;
+
+            padding: 2vw;
+            height: 45vh;
+
+            background-color: $white;
+            color: $nasa-black;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &-top {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 2vw;
+            }
+
+            &-writing {
+                font-size: .8rem;
+                font-weight: 100;
+                padding-bottom: 2vw;
+            }
+
+            &-confirm {
+                width: 50%;
+
+                display: flex;
+                justify-content: space-between;
+
+                margin: auto;
+
+                position: relative;
+                bottom: 0rem;
+
+                &-writing {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+
+    &__wallet {
+
+        padding: 0 4vw;
+        margin: 6vw 0;
+
+        &-section {
+            display: flex;
+
+            &-number {
+                background-color: $white;
+                color: $nasa-black;
+
+                width: 50%;
+                height: fit-content;
+
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                padding: 2vw;
+                border-radius: 10px;
+            }
+        }
+
+        &-confirm {
+            @extend .traveler-details__cards-card-confirm;
+            width: 23%;
+
+            &-writing {
+                @extend .traveler-details__cards-card-confirm-writing;
+            }
+        }
+    }
+
+    &__buttons {
+        width: 50%;
+        margin: auto;
+
+        display: flex;
+        justify-content: space-between;
+
+        &-button {
+            background-color: $button-red;
+            border: none;
+            border-radius: 10px;
+
+            color: $white;
+
+            width: 45%;
+            height: 8vw;
+
+            text-decoration: none;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+span {
+    font-weight: 800;
+}

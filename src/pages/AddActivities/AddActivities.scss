@@ -4,8 +4,10 @@
     height: 100vh;
     color: $white;
 
+    padding: 13vw 4vw 4vw 0;
+
     &__background {
-        background-image: url('../../assets/backgrounds/marsbas-blurr-v4\ \(wider\).png');
+        background-image: url('../../assets/backgrounds/backgroundMain.png');
         background-position: center;
         background-size: cover;
     }
@@ -14,11 +16,20 @@
         text-align: center;
     }
 
+    &__container {
+        padding: 0 4vw;
+
+        &-heading {
+            margin: 4vw 0;
+        }
+    }
+
     &__activities {
         display: flex;
         flex-direction: column;
-        // justify-content: center;
         align-items: center;
+
+        margin-bottom: 6vw;
 
         &-activity {
             width: 90%;
@@ -62,6 +73,11 @@
 
             color: $white;
             background-color: $button-red;
+
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }

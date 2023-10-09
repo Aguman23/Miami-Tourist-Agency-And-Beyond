@@ -9,20 +9,34 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    
+    padding: 20vw 0 0 0;
 
     color: $white;
 
     &__heading {
         width: 100%;
         padding: 0 6vw;
-        margin: 2vw;
+        margin: 4vw;
+        text-align: center;
+
+        font-size: 2rem;
+    }
+
+    &__countdown {
+        font-size: 8rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 60vh;
     }
 
     &__completed {
         width: 100%;
-        height: 60vh;
+        height: 70vh;
 
         display: flex;
         flex-direction: column;

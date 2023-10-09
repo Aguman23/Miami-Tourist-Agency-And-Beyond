@@ -1,10 +1,11 @@
 import './AddActivities.scss';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import chevronDownWhite from '../../assets/icons/arrowdownwhite.svg';
+import TopBar from '../../components/TopBar/TopBar';
 
 function AddActivities() {
-    // const [dropMenu, setDropMenu] = useState('add-activities__activities-activity');
     const activities = [
         {
             id: 1,
@@ -56,10 +57,11 @@ function AddActivities() {
 
     return (
         <main className='add-activities add-activities__background'>
+            <TopBar home={false} />
             <h1 className='add-activities__heading'>Explore Mars</h1>
 
             <article className='add-activities__container'>
-                <h2 className='add-activites__container-heading'>
+                <h2 className='add-activities__container-heading'>
                     Add Activites
                 </h2>
                 <div className='add-activities__activities'>
@@ -82,9 +84,9 @@ function AddActivities() {
                 <button className='add-activities__buttons-button'>
                     Previous
                 </button>
-                <button className='add-activities__buttons-button'>
+                <Link to='/travelerdetails' className='add-activities__buttons-button'>
                     Next
-                </button>
+                </Link>
             </div>
         </main>
     )

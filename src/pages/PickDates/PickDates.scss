@@ -1,12 +1,79 @@
 @use '../../styles/partials/variables' as *;
 
+.calendar {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    z-index: 100;
+
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+
+    padding: 16vw 0;
+
+    &__card {
+        width: 95%;
+        height: fit-content;
+        background-color: $white;
+
+        border-radius: 10px;
+
+        color: $nasa-black;
+
+        &-top {
+            padding: 2vw;
+            text-align: right;
+        }
+
+        &-heading {
+            padding: 0 2vw;
+            margin-bottom: 4vw;
+        }
+
+        &-list {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-card {
+            width: 90%;
+            height: 15vw;
+            margin-bottom: 4vw;
+
+            box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+            border-radius: 10px;
+
+            background-color: $nasa-blue;
+            color: $white;
+
+            font-size: 1.5rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-writing {
+            padding: 3vw 4vw;
+
+            font-size: .7rem;
+        }
+    }
+
+}
 
 .pick-dates {
     color: $white;
-    padding: 0 4vw;
+    padding: 13vw 4vw 0 4vw;
 
     &__background {
-        background-image: url('../../assets/backgrounds/marsbas-blurr-v4\ \(wider\).png');
+        background-image: url('../../assets/backgrounds/backgroundMain.png');
         background-position: center;
         background-size: cover;
 
@@ -82,27 +149,6 @@
 
             color: $white;
             background-color: $button-red;
-        }
-    }
-
-    &__amenities {
-
-        &-container {
-            display: flex;
-            flex-wrap: wrap;
-            
-            width: 100%;
-        }
-
-        &-amenity {
-            width: 45%;
-            height: 30vw;
-
-            margin: 2vw;
-            background-color: $white;
-
-            border-radius: 10px;
-            
         }
     }
 

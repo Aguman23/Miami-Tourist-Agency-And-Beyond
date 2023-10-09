@@ -1,11 +1,37 @@
 import './PickDates.scss';
 import calendar from '../../assets/icons/Calendar white.svg';
+import ex from '../../assets/icons/EX.svg';
 
 import { useState } from 'react';
+import TopBar from '../../components/TopBar/TopBar';
 
 function PickDates() {
-
+    const [selectedDates, setSelectedDates] = useState('');
+    const [showCalendar, setShowCalendar] = useState(false);
     const [passengerCount, setPassengerCount] = useState(0);
+
+    const dates = [
+        {
+            id: 1,
+            dates: 'June 2123 - Jan 2124'
+        },
+        {
+            id: 2, 
+            dates: 'July 2123 - Feb 2124'
+        },
+        {
+            id: 3,
+            dates: 'Aug 2123 - April 2124'
+        },
+        {
+            id: 4,
+            dates: 'Sept 2123 - June 2124'
+        },
+        {
+            id: 5,
+            dates: 'Oct 2123 - Sept 2124'
+        }
+    ];
 
     function handleChangePassengerNum(symb) {
         switch (symb) {
@@ -20,8 +46,41 @@ function PickDates() {
         }
     }
 
+    function handleCalendarClick() {
+        setShowCalendar(true);
+    }
+
+    function handleChooseDates(date) {
+        setSelectedDates(date);
+        setShowCalendar(false);
+    }
+
     return (
         <main className='pick-dates  pick-dates__background'>
+            <TopBar home={false} />
+            <section className={showCalendar ? 'calendar' : 'off'}>
+                <section className='calendar__card'>
+                    <div className='calendar__card-top'>
+                        <img onClick={() => setShowCalendar(false)} src={ex}></img>
+                    </div>
+                    <h2 className='calendar__card-heading'>Available Dates*</h2>
+                    <div className='calendar__card-list'>
+                        {
+                            dates.map( date => {
+                                return (
+                                    <div onClick={() => handleChooseDates(date.dates)} key={date.id} className='calendar__card-card'>
+                                        {date.dates}
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                    <p className='calendar__card-writing'>
+                        *Prices and travel times vary depending on the time of the year due to the changes in distance between Earth and Mars.
+                    </p>
+                </section>
+            </section>
+
             <h1 className='pick-dates__heading'>Explore Mars</h1>
 
             <section className='pick-dates__pick-dates'>
@@ -56,9 +115,9 @@ function PickDates() {
                 </h2>
                 <div className='pick-dates__container'>
                     <p>
-
+                        {selectedDates}
                     </p>
-                    <img src={calendar}></img>
+                    <img onClick={handleCalendarClick} src={calendar}></img>
                 </div>
             </div>
 
@@ -84,26 +143,6 @@ function PickDates() {
                     Next
                 </button>
             </div>
-
-            <section className='pick-dates__amenities extra'>
-                <h2 className='pick-dates__secondary-heading'>
-                    Voyager 123's Amenities
-                </h2>
-                <div className='pick-dates__amenities-container'>
-                    <div className='pick-dates__amenities-amenity'>
-
-                    </div>
-                    <div className='pick-dates__amenities-amenity'>
-                        
-                    </div>
-                    <div className='pick-dates__amenities-amenity'>
-                        
-                    </div>
-                    <div className='pick-dates__amenities-amenity'>
-                        
-                    </div>
-                </div>
-            </section>
         </main>
     )
 }
