@@ -2,12 +2,11 @@
 @use "../../styles/partials/variables" as *;
 
 .mars-explore {
-  
   &__main-background {
     background-image: url("../../assets/backgrounds/background\ main.png");
     background-position: center;
     background-size: cover;
-    height: 200vh;
+    height: 249vh;
 
     padding: 14vw 0 0 0;
     position: relative;
