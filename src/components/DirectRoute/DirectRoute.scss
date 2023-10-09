@@ -1,0 +1,48 @@
+@use "../../styles/partials/variables" as *;
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.modalContainer-1 {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 110%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 10px;
+}
+.close_container {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+.closeBtn {
+  text-align: right;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 1rem;
+  padding-bottom: 2rem;
+}
+.content-description {
+  font-size: 1rem;
+  font-family: "Inter";
+  font-weight: 400;
+  color: $nasa-black;
+}
