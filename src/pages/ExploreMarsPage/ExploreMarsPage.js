@@ -2,11 +2,22 @@ import './ExploreMarsPage.scss';
 import info from "../../assets/icons/Info white.svg"
 import rightarrow from "../../assets/icons/Sec button arrow (2).svg"
 import marsimage from "../../assets/images/moons of mars nasa photo.webp"
+import DirectRoute from '../../components/DirectRoute/DirectRoute';
+import ScenicRoute from '../../components/ScenicRoute/ScenicRoute';
+import React, { useState } from 'react';
+
 
 function ExploreMarsPage() {
+    const [directRoute, setDirectRoute] = useState(false);
+    const [scenicRoute, setScenicRoute] = useState(false);
     return (
         <main className='mars-explore__main-background'>
-            
+            <DirectRoute 
+                        open={directRoute} 
+                        onClose={() => setDirectRoute(false)} />
+            <ScenicRoute 
+                        open={scenicRoute} 
+                        onClose={() => setScenicRoute(false)} />
             <div  className='mars-explore__title-container'>
                 <h2 className="mars-explore__title">Explore Mars</h2>
             </div>
@@ -26,13 +37,13 @@ function ExploreMarsPage() {
                     </div>
 
                     <div  className="format-right">
-                        <img className="mars-explore__info" src={info} alt="info"/>
+                        <img className="mars-explore__info" onClick={() => setDirectRoute(true)} src={info} alt="info"/>
                     </div>
 
                 </div>
-                
+
                 <div className="format-bottom-right">
-                    <button className="mars-explore__select-button">Select</button>
+                    <button className="mars-explore__select-button" >Select</button>
                     <img src={rightarrow} alt="right arrow"/>
                 </div>
 
@@ -47,7 +58,8 @@ function ExploreMarsPage() {
                     </div>
 
                     <div className="format-right">
-                        <img src={info} alt="info"/>
+                        <img src={info}  onClick={() => setScenicRoute(true)} alt="info"/>
+                        
                     </div>
 
                 </div>
@@ -58,6 +70,7 @@ function ExploreMarsPage() {
                 </div>
 
             </div>
+            
         
         <div className="mars-explore__buttons-container">
             <div>
@@ -101,7 +114,7 @@ function ExploreMarsPage() {
         </div>
 
         <div className="format__learn">
-                    <button className="mars-explore__select-button">LearnMore </button>
+        <a href="https://science.nasa.gov/mars/facts/" target="_blank" rel="noopener noreferrer"><button className="mars-explore__select-button">LearnMore </button></a>
                     <img src={rightarrow} alt="right arrow"/>
         </div>
 
