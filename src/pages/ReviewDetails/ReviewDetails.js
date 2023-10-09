@@ -23,7 +23,7 @@ function ReviewDetails() {
                         <p className='review-details__writing--bold'>Passengers:</p>
                         <div className='review-details__together'>
                             <p>2 Adults</p>
-                            <p>ñ FILL IN (x2)</p>
+                            <p>ñ 1,700.00 (x2)</p>
                         </div>
 
                         <p className='review-details__writing--bold'>Accommodations:</p>
@@ -41,7 +41,7 @@ function ReviewDetails() {
 
                     <div className='review-details__together super-extra'>
                         <p className='review-details__writing--bold'>Total:</p>
-                        <p>TOTAL HERE</p>
+                        <p>ñ 5,000.00</p>
                     </div>
                 </section>
 

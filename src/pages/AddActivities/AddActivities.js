@@ -22,21 +22,21 @@ function AddActivities() {
         },
         {
             id: 3,
-            name: 'Activity 3',
+            name: 'Rabe Crater Sand Dunes',
             description: 'COMING SOON',
             price: 'N/A',
             class: 'add-activities__activities-activity'
         },
         {
             id: 4,
-            name: 'Activity 4',
+            name: 'Curiosity Rover Site',
             description: 'COMING SOON',
             price: 'N/A',
             class: 'add-activities__activities-activity'
         },
         {
             id: 5,
-            name: 'Activity 5',
+            name: 'MRVN® Ride',
             description: 'COMING SOON',
             price: 'N/A',
             class: 'add-activities__activities-activity'

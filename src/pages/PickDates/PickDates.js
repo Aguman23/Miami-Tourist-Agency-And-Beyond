@@ -11,6 +11,7 @@ function PickDates() {
     const [selectedDates, setSelectedDates] = useState('');
     const [showCalendar, setShowCalendar] = useState(false);
     const [passengerCount, setPassengerCount] = useState(0);
+    const [datePrice, setDatePrice] = useState(0);
 
     const dates = [
         {
@@ -53,6 +54,7 @@ function PickDates() {
     }
 
     function handleChooseDates(date) {
+        setDatePrice(datePrice + 1700);
         setSelectedDates(date);
         setShowCalendar(false);
     }
@@ -129,10 +131,7 @@ function PickDates() {
                 </p>
                 <div className='pick-dates__container'>
                     <p className='pick-dates__description'>
-                        ñ
-                    </p>
-                    <p className='pick-dates__description'>
-                        per person
+                        ñ {passengerCount*500.00 + datePrice} per person
                     </p>
                 </div>
             </section>

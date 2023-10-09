@@ -3,6 +3,10 @@
 .activity {
     width: 90%;
 
+    &__dark {
+        border: .5px solid $nasa-black;
+    }
+
     &__selected {
         background-color: white;
         color: black;
@@ -18,8 +22,10 @@
 
         background-color: #F9F9F9;
 
-        width: 90%;
+        width: 100%;
         border-radius: 0 0 10px 10px;
+
+        padding: 4vw 0;
 
         &-image {
             width: 70%;
@@ -30,6 +36,23 @@
             font-size: .8rem;
 
             padding: 2vw 4vw;
+        }
+
+        &-bottom {
+            color: $nasa-black;
+            font-size: .7rem;
+            width: 90%;
+
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    &__add {
+        display: flex;
+
+        &-writing {
+            padding-right: 1vw;
         }
     }
 }
