@@ -1,0 +1,35 @@
+@use '../../styles/partials/variables' as *;
+
+.activity {
+    width: 90%;
+
+    &__selected {
+        background-color: white;
+        color: black;
+
+        border-radius: 10px 10px 0 0;
+    }
+
+    &__dropdown {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #F9F9F9;
+
+        width: 90%;
+        border-radius: 0 0 10px 10px;
+
+        &-image {
+            width: 70%;
+        }
+
+        &-writing {
+            color: $nasa-black;
+            font-size: .8rem;
+
+            padding: 2vw 4vw;
+        }
+    }
+}

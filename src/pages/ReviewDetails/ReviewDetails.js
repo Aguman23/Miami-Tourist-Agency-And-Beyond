@@ -46,9 +46,9 @@ function ReviewDetails() {
                 </section>
 
                 <div className='review-details__buttons'>
-                    <button className='review-details__buttons-button'>
+                    <Link to='/travelerdetails' className='review-details__buttons-button'>
                         Previous
-                    </button>
+                    </Link>
                     <Link to='/allset' className='review-details__buttons-button'>
                         Confirm
                     </Link>

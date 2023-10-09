@@ -1,9 +1,8 @@
 import './AddActivities.scss';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import chevronDownWhite from '../../assets/icons/arrowdownwhite.svg';
 import TopBar from '../../components/TopBar/TopBar';
+import Activities from '../../components/Activities/Activities';
 
 function AddActivities() {
     const activities = [
@@ -68,13 +67,8 @@ function AddActivities() {
                     {
                         activities.map( act => {
                             return (
-                                <div key={act.key} className={act.class}>
-                                    <p>{act.name}</p>
-                                    <div onClick={() => spreadActivityMenu(act.key)} className='add-activities__chevron-container'>
-                                        <img src={chevronDownWhite}></img>
-                                    </div>
-                                </div>
-                            )    
+                                <Activities act={act} />
+                            )   
                         })
                     }
                 </div>

@@ -3,6 +3,8 @@ import calendar from '../../assets/icons/Calendar white.svg';
 import ex from '../../assets/icons/EX.svg';
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import TopBar from '../../components/TopBar/TopBar';
 
 function PickDates() {
@@ -136,12 +138,12 @@ function PickDates() {
             </section>
 
             <div className='pick-dates__buttons extra'>
-                <button className='pick-dates__buttons-button'>
+                <Link to='/exploreMars' className='pick-dates__buttons-button'>
                     Previous
-                </button>
-                <button className='pick-dates__buttons-button'>
+                </Link>
+                <Link to='/yourstay' className='pick-dates__buttons-button'>
                     Next
-                </button>
+                </Link>
             </div>
         </main>
     )

@@ -7,6 +7,12 @@
         margin: 3vw;
     }
 
+    &__coming-soon {
+        width: 100%;
+        background-color: rgba($white, 30%);
+        margin-bottom: 1vw;
+    }
+
     &__carousel {
         display: flex;
         flex-wrap: nowrap;

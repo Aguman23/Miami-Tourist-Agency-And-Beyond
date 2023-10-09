@@ -2,11 +2,14 @@
 @use "../../styles/partials/variables" as *;
 
 .mars-explore {
+  
   &__main-background {
     background-image: url("../../assets/backgrounds/background\ main.png");
     background-position: center;
     background-size: cover;
     height: 100%;
+
+    padding: 14vw 0 0 0;
   }
   &__title {
     font-family: "Inter";
@@ -122,6 +125,8 @@
     padding: 0.625rem;
     border-radius: 10px;
     border: none;
+
+    text-decoration: none;
   }
   &__more {
     color: $white;

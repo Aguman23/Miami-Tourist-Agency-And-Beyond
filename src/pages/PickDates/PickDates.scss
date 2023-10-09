@@ -149,6 +149,12 @@
 
             color: $white;
             background-color: $button-red;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none;
         }
     }
 

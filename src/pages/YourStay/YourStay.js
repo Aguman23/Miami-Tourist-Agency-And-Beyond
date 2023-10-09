@@ -3,6 +3,8 @@ import './YourStay.scss';
 import arrowRight from '../../assets/icons/arrow-right.svg';
 import TopBar from '../../components/TopBar/TopBar';
 
+import { Link } from 'react-router-dom';
+
 function YourStay() {
     const selection = [
         {
@@ -23,7 +25,8 @@ function YourStay() {
             price: '+ ñ 1,500.00 per person',
             class: 'your-stay__card your-stay__card--luxury-suites'
         }
-    ]
+    ];
+
     return (
         <main className='your-stay'>
             <TopBar home={false} />
@@ -52,12 +55,12 @@ function YourStay() {
             </section>
 
             <section className='your-stay__buttons'>
-                <button className='your-stay__buttons-button'>
+                <Link to='/pickdates' className='your-stay__buttons-button'>
                     Previous
-                </button>
-                <button className='your-stay__buttons-button'>
+                </Link>
+                <Link to='/addactivities' className='your-stay__buttons-button'>
                     Next
-                </button>
+                </Link>
             </section>
         </main>
     )

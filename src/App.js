@@ -16,7 +16,13 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<HomePage />} />
+        <Route path='/exploreMars' element={<ExploreMarsPage />} />
+        <Route path="/yourstay" element={<YourStay />} />
         <Route path="/pickdates" element={<PickDates />} />
+        <Route path='/addactivities' element={<AddActivities />} />
+        <Route path='/travelerdetails' element={<TravelerDetails />} />
+        <Route path='/reviewdetails' element={<ReviewDetails />} />
+        <Route path='/allset' element={<AllSet />} />
       </Routes>
       <NavBar />
     </BrowserRouter>

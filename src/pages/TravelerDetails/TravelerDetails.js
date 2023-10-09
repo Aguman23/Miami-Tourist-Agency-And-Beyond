@@ -1,11 +1,15 @@
 import './TravelerDetails.scss';
+
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 import editPen from '../../assets/icons/editpen.svg';
 import arrowRight from '../../assets/icons/arrow-right.svg';
 import TopBar from '../../components/TopBar/TopBar';
+import checkmark from '../../assets/icons/evaCheckmarkCircleFill0.svg';
 
 function TravelerDetails() {
+    const [confirmImg, setConfirmImg] = useState(true);
     const passengers = [
         {
             id: 1,
@@ -31,7 +35,8 @@ function TravelerDetails() {
             email: 'iwaly@gmail.com',
             address: '123 Main Road Los Angeles, California, USA'
         }
-    ]
+    ];
+
     return (
         <>
             <TopBar home={false} />
@@ -90,11 +95,11 @@ function TravelerDetails() {
                                                 {person.address}
                                             </p>
                                         </div>
-                                        <div className='traveler-details__cards-card-confirm'>
+                                        <div onClick={() => setConfirmImg(false)} className='traveler-details__cards-card-confirm'>
                                             <p className='traveler-details__cards-card-confirm-writing'>
                                                 Confirm
                                             </p>
-                                            <img src={arrowRight}></img>
+                                            <img src={confirmImg ? arrowRight : checkmark}></img>
                                         </div>
                                     </div>
                                 )
@@ -112,19 +117,19 @@ function TravelerDetails() {
                             <p>S$tghrjwññcef. shisehihcsjsk hcieohfsiohf</p>
                             <img src={editPen}></img>
                         </div>
-                        <div className='traveler-details__wallet-confirm'>
+                        <div onClick={() => setConfirmImg(false)} className='traveler-details__wallet-confirm'>
                             <p className='traveler-details__wallet-confirm-writing'>
                                 Confirm
                             </p>
-                            <img src={arrowRight}></img>                
+                            <img src={confirmImg ? arrowRight : checkmark}></img>                
                         </div>
                     </div>
                 </section>
 
                 <section className='traveler-details__buttons'>
-                    <button className='traveler-details__buttons-button'>
+                    <Link to='/yourstay' className='traveler-details__buttons-button'>
                         Previous
-                    </button>
+                    </Link>
                     <Link to='/reviewdetails' className='traveler-details__buttons-button'>
                         Next
                     </Link>
