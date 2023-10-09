@@ -5,19 +5,29 @@ import marsimage from "../../assets/images/moons of mars nasa photo.webp"
 import TopBar from '../../components/TopBar/TopBar';
 
 import { Link } from 'react-router-dom';
+import DirectRoute from '../../components/DirectRoute/DirectRoute';
+import ScenicRoute from '../../components/ScenicRoute/ScenicRoute';
+import React, { useState } from 'react';
+
 
 function ExploreMarsPage() {
+    const [directRoute, setDirectRoute] = useState(false);
+    const [scenicRoute, setScenicRoute] = useState(false);
     return (
-        <>
+        <main className='mars-explore__main-background'>
             <TopBar home={false} />
-            <main className='mars-explore__main-background'>
-
-                <div className='mars-explore__title-container'>
-                    <h2 className="mars-explore__title">Explore Mars</h2>
-                </div>
-
-                <p className="mars-explore__description">Embark on a journey to the enigmatic Red Planet, where adventure beckons at your own pace. Choose the high-speed sprint for a thrilling arrival within hours, or indulge in a luxurious, leisurely cruise through space. Whichever you pick, the allure of Mars awaits.</p>
-
+            <DirectRoute 
+                        open={directRoute} 
+                        onClose={() => setDirectRoute(false)} />
+            <ScenicRoute 
+                        open={scenicRoute} 
+                        onClose={() => setScenicRoute(false)} />
+            <div  className='mars-explore__title-container'>
+                <h2 className="mars-explore__title">Explore Mars</h2>
+            </div>
+            
+            <p className="mars-explore__description">Embark on a journey to the enigmatic Red Planet, where adventure beckons at your own pace. Choose the high-speed sprint for a thrilling arrival within hours, or indulge in a luxurious, leisurely cruise through space. Whichever you pick, the allure of Mars awaits.</p>
+        
 
                 <h3 className="mars-explore__subtitle-1">Choose your speed:</h3>
 
@@ -30,16 +40,16 @@ function ExploreMarsPage() {
                             <h3 className="mars-explore__subtitle-2">Direct Route</h3>
                         </div>
 
-                        <div className="format-right">
-                            <img className="mars-explore__info" src={info} alt="info" />
-                        </div>
-
+                    <div  className="format-right">
+                        <img className="mars-explore__info" src={info} alt="info"/>
                     </div>
 
-                    <div className="format-bottom-right">
-                        <button className="mars-explore__select-button">Select</button>
-                        <img src={rightarrow} alt="right arrow" />
-                    </div>
+                </div>
+                
+                <div className="format-bottom-right">
+                    <button className="mars-explore__select-button">Select</button>
+                    <img src={rightarrow} alt="right arrow"/>
+                </div>
 
                 </div>
 
@@ -51,9 +61,9 @@ function ExploreMarsPage() {
                             <h3 className="mars-explore__subtitle-2">Scenic Route</h3>
                         </div>
 
-                        <div className="format-right">
-                            <img src={info} alt="info" />
-                        </div>
+                    <div className="format-right">
+                        <img src={info} alt="info"/>
+                    </div>
 
                     </div>
 
@@ -62,19 +72,19 @@ function ExploreMarsPage() {
                         <img src={rightarrow} alt="right arrow" />
                     </div>
 
-                </div>
-
-                <div className="mars-explore__buttons-container">
-                    <div>
-                        <Link to='/' className="mars-explore__red-buttons">Previous</Link>
-                    </div>
-                    <div>
-                        <Link to='/pickdates' className="mars-explore__red-buttons">Next</Link>
-                    </div>
-                </div>
-                <h3 className="mars-explore__more">More about Mars</h3>
-
-                <p className="mars-explore__description-2">Views</p>
+            </div>
+        
+        <div className="mars-explore__buttons-container">
+            <div>
+                <button className="mars-explore__red-buttons">Previous</button>
+            </div>
+            <div>
+                <button className="mars-explore__red-buttons">Next</button>
+            </div>
+        </div>
+        <h3 className="mars-explore__more">More about Mars</h3>
+        
+        <p className="mars-explore__description-2">Views</p>
 
                 <img className="mars-explore__moon" src={marsimage} alt="mars" />
 
@@ -105,10 +115,10 @@ function ExploreMarsPage() {
                     <p className="mars-explore__description-3">4.5 billion years</p>
                 </div>
 
-                <div className="format__learn">
+        <div className="format__learn">
                     <button className="mars-explore__select-button">LearnMore </button>
-                    <img src={rightarrow} alt="right arrow" />
-                </div>
+                    <img src={rightarrow} alt="right arrow"/>
+        </div>
 
             </main>
         </>
