@@ -7,6 +7,9 @@ import AllSet from "./pages/AllSet/AllSet";
 import TravelerDetails from "./pages/TravelerDetails/TravelerDetails";
 import ReviewDetails from "./pages/ReviewDetails/ReviewDetails";
 import YourStay from "./pages/YourStay/YourStay";
+import ExploreMarsPage from "./pages/ExploreMarsPage/ExploreMarsPage";
+import "./App.scss"
+
 
 function App() {
   return (
@@ -14,11 +17,6 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path="/pickdates" element={<PickDates />} />
-        <Route path="/addactivities" element={<AddActivities />} />
-        <Route path="/allset" element={<AllSet />} />
-        <Route path="/travelerdetails" element={<TravelerDetails />} />
-        <Route path="/reviewdetails" element={<ReviewDetails />} />
-        <Route path="/yourstay" element={<YourStay />} />
       </Routes>
       <NavBar />
     </BrowserRouter>
